@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+        
+        <title>Kiddush Club Entry Quiz:</title>
+    </head>
+    <body>
+        <div class="jumbotron text-center pad">
+            <h3 id="header">Please answer all of the questions, and click the button on the bottom of the page to submit your responses.</h1>
+            <h3 id="toDelete">You must get at least an 80%. Your score will be sent to the group for verification.</h1>
+        </div>
+
+        <div class="container" id="body">
+            <h1>Question 1</h1>
+            <div class="form-group">
+                <h2>How many pairs of shoes does Avrami own?</h2>
+                <input type="text" class="form-control" id="question-1">
+            </div>
+            <br>
+            <h1>Question 2</h1>
+            <div class="form-group">
+                <h2>How much does a pair of socks weigh in miligrams?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 3</h1>
+            <div class="form-group">
+                <h2>How many countries fought in World War 2?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 4</h1>
+            <div class="form-group">
+                <h2>What is the best beer in the world?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 5</h1>
+            <div class="form-group">
+                <h2>Who won the World Series in 1978?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 6</h1>
+            <div class="form-group">
+                <h2>What is the best tv show of all times?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 7</h1>
+            <div class="form-group">
+                <h2>How heavy is the average piece of paper in China?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 8</h1>
+            <div class="form-group">
+                <h2></h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 9</h1>
+            <div class="form-group">
+                <h2>If the world ended today, what would you put in your backpack?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 10</h1>
+            <div class="form-group">
+                <h2>How many fishes are there in the Atlantic Ocean?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 11</h1>
+            <div class="form-group">
+                <h2>Left or right?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 12</h1>
+            <div class="form-group">
+                <h2>Does Molly sing in the shower? (True or false)</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 13</h1>
+            <div class="form-group">
+                <h2>If yes, what is Joeys favorite song, and if no, what is Joey's favorite song (I realize they don’t connect)?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 14</h1>
+            <div class="form-group">
+                <h2>What is the best color Mike and Ike?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 15</h1>
+            <div class="form-group">
+                <h2>How many?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 16</h1>
+            <div class="form-group">
+                <h2>What color is Molly’s comforter?</h2>    
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 17</h1>
+            <div class="form-group">
+                <h2>In 1991 which country had the most camels?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 18</h1>
+            <div class="form-group">
+                <h2>What product was in the first TV commercial?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 19</h1>
+            <div class="form-group">
+                <h2>Do you even Google?</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+            <br>
+            <h1>Question 20</h1>
+            <div class="form-group">
+                <h2>Hmm, I think your one of those Bing people...</h2>
+                <input type="text" class="form-control" id="question-2">
+            </div>
+
+            <div class=" text-center">
+                <button class="btn btn-primary btn-lg" onclick="submitQuiz()">Submit</button>
+            </div>
+        </div>
+        <script>
+            function submitQuiz(){
+                var numQuestions = 20;
+                var numCorrect = 0;
+                for(var i = 1; i <= numQuestions; i++){
+                    var question = "question-" + i;
+                    var text = document.getElementById(question);
+                    if(text !== ""){
+                        numCorrect += Math.round(grade());
+                    }
+                }
+                var header = document.getElementById("header");
+                var body = document.getElementById("body");
+
+                console.log(numCorrect);
+                var score = Math.round((numCorrect / numQuestions) * 100);
+                if(score > 79){
+                    score = 79;
+                }
+
+                header.innerHTML = "Sorry, you only scored a " + score;
+                document.getElementById("toDelete").innerHTML = "";
+
+                document.getElementById("body").innerHTML = "";
+            }
+            function grade(){
+                return Math.random() * 1;
+            }
+        </script>         
+    </body>
+</html>
