@@ -16,7 +16,7 @@
     <body>
         <div class="jumbotron text-center pad">
             <h3 id="header">Please answer all of the questions, and click the button on the bottom of the page to submit your responses.</h1>
-            <h3 id="toDelete">You must get at least an 80%. Your score will be sent to the group for verification.</h1>
+            <h3 id="toDelete">You must get at least an 80%. Please send a screenshot of your grade for varification.</h1>
         </div>
 
         <div class="container" id="body">
@@ -164,7 +164,7 @@
                     score = 79;
                 }
 
-                header.innerHTML = "Sorry, you only scored a " + score;
+                header.innerHTML = "Sorry, your score of " + score + "% is not high enough. Please try again.";
                 document.getElementById("toDelete").innerHTML = "";
 
                 document.getElementById("body").innerHTML = "";
